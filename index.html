@@ -30,8 +30,8 @@
 
 
 
-    <style>
- /* 加載動畫樣式 */
+  <style>
+    /* 加載動畫樣式 */
     #loading-animation {
       position: fixed;
       top: 0;
@@ -125,6 +125,8 @@
     }
 
 
+
+
         
         :root {
             --background: #E8F0F2;
@@ -173,12 +175,6 @@ window.onload = function() {
         document.getElementById('content').style.display = 'block';
     }
 };
-    // Check if the load time is less than 1.5 seconds (1500 milliseconds)
-    if (loadTime < 1500) {
-      
-      document.getElementById('loading-animation').style.display = 'none';
-      document.getElementById('content').style.display = 'block';
-    } else {
 
 document.getElementById('content').style.display = 'none';
   </script>
