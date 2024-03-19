@@ -159,7 +159,20 @@
 
 
   <script>
-  
+var startTime = performance.now();
+
+ window.onload = function() {
+
+    var loadTime = performance.now() - startTime;
+    if (loadTime < 1000) {
+    } else {
+    document.getElementById('loading-animation').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+    }
+ };
+
+
+ document.getElementById('content').style.display = 'none';
 window.onload = function() {
     document.getElementById('loading-animation').style.display = 'none';
     document.getElementById('content').style.display = 'block';
