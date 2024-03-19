@@ -135,27 +135,18 @@
 
 <div>
 <div id="loading-animation">
-    <div class="spinner">&#x1F31E;</div> <!-- 使用 Unicode 圖標 -->
+    <div class="spinner">&#x1F31E;</div> 
     <div id="loading-bar"></div>
     <div class="cloud"></div>
   </div>
 
-  <div id="content">
-    <h1>Welcome to my website!</h1>
-    <p>This is some sample content.</p>
-  </div>
 
   <script>
-    // 模擬頁面加載需要 3 秒
+  
     setTimeout(function() {
-      // 頁面加載完成後隱藏加載動畫
       document.getElementById('loading-animation').style.display = 'none';
-
-      // 顯示網頁內容
       document.getElementById('content').style.display = 'block';
-    }, 3000); // 3000 毫秒 = 3 秒
-
-    // 初始時隱藏網頁內容
+    }
     document.getElementById('content').style.display = 'none';
   </script>
 
