@@ -161,23 +161,24 @@
   <script>
 var startTime = performance.now();
 
- window.onload = function() {
-
-    var loadTime = performance.now() - startTime;
-    if (loadTime < 1000) {
-    } else {
-    document.getElementById('loading-animation').style.display = 'none';
-    document.getElementById('content').style.display = 'block';
-    }
- };
-
-
- document.getElementById('content').style.display = 'none';
 window.onload = function() {
-    document.getElementById('loading-animation').style.display = 'none';
-    document.getElementById('content').style.display = 'block';
-}
-    document.getElementById('content').style.display = 'none';
+    // 計算載入時間
+    var loadTime = performance.now() - startTime;
+
+    // 檢查載入時間是否少於1秒（1000毫秒）
+    if (loadTime < 1000) {
+        // 如果載入時間少於1秒，直接顯示內容
+        document.getElementById('loading-animation').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+    } else {
+        // 如果載入時間超過1秒，顯示動畫
+        document.getElementById('loading-animation').style.display = 'block';
+        document.getElementById('content').style.display = 'none';
+    }
+};
+
+// 初始隱藏內容
+document.getElementById('content').style.display = 'none';
   </script>
 
     <style>
