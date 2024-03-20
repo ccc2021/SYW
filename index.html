@@ -1001,13 +1001,20 @@ window.onload = function() {
 </div>
 
 <style>
+.item-img {
+    position: relative; /* 確保文字可以相對於這個容器定位 */
+}
+
 .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 將文字定位在容器的中心 */
     color: white;
     font-size: 24px; /* 根據需要調整字體大小 */
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字陰影效果 */
 }
-
 
     
     .cid-u6Mcis6vwP {
@@ -1103,6 +1110,7 @@ window.onload = function() {
         </div>
     </div>
 </section>
+
 
     
 <style>
