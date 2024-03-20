@@ -1002,7 +1002,18 @@ window.onload = function() {
 
 <style>
 .item-img {
-    position: relative; /* 確保文字可以相對於這個容器定位 */
+    position: relative; /* 確保文字和遮罩可以相對於這個容器定位 */
+}
+
+.item-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明白色遮罩 */
+    z-index: 1; /* 確保遮罩位於圖片和文字之下 */
 }
 
 .text {
@@ -1010,10 +1021,11 @@ window.onload = function() {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* 將文字定位在容器的中心 */
-    color: white;
+    color: black; /* 文字顏色改為黑色 */
     font-size: 24px; /* 根據需要調整字體大小 */
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字陰影效果 */
+    z-index: 2; /* 確保文字位於遮罩之上 */
 }
 
     
@@ -1095,7 +1107,7 @@ window.onload = function() {
                 <div class="item-wrapper">
                     <div class="item-img">
                         <img src="assets/images/Fram.jpg" alt="雲林土地" data-slide-to="1" data-bs-slide-to="1">
-                        <div class="text">房屋</div>
+                        <div class="text">土地</div>
                     </div>
                 </div>
             </div>
@@ -1103,7 +1115,7 @@ window.onload = function() {
                 <div class="item-wrapper">
                     <div class="item-img">
                         <img src="assets/images/House.jpg" alt="雲林房屋" data-slide-to="2" data-bs-slide-to="2">
-                        <div class="text">土地</div>
+                        <div class="text">房屋</div>
                     </div>
                 </div>
             </div>
