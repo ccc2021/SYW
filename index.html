@@ -1089,6 +1089,31 @@ window.onload = function() {
     .cid-u6Mcis6vwP .content-head {
         max-width: 800px;
     }
+
+
+    /* 針對手機螢幕 */
+@media (max-width: 575px) {
+    .item-img img {
+        width: 100%; /* 圖片寬度為100%，高度自動調整以保持比例 */
+        height: auto;
+    }
+}
+
+/* 針對平板螢幕 */
+@media (min-width: 576px) and (max-width: 767px) {
+    .item-img img {
+        width: 100%; /* 圖片寬度為100%，高度自動調整以保持比例 */
+        height: auto;
+    }
+}
+
+/* 針對桌面螢幕 */
+@media (min-width: 768px) {
+    .item-img img {
+        width: 300px; /* 圖片寬度為300px，高度自動調整以保持比例 */
+        height: auto;
+    }
+}
 </style>
 <section class="features03 cid-u6Mcis6vwP" id="partners-1-u6Mcis6vwP">
     <div class="container-fluid">
