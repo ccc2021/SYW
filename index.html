@@ -1041,9 +1041,13 @@ window.onload = function() {
     }
 
     .cid-u6Mcis6vwP img,
-    .cid-u6Mcis6vwP .item-img {
-        width: 100%;
-    }
+    .cid-u6Mcis6vwP  .item-img img {
+    width: 100%; /* 圖片寬度為100%，高度自動調整以保持比例 */
+    height: auto;
+    object-fit: cover; /* 確保圖片不會失真 */
+}
+
+   
 
     .cid-u6Mcis6vwP .item:focus,
     .cid-u6Mcis6vwP span:focus {
