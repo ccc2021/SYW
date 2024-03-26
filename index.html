@@ -978,10 +978,13 @@ window.onload = function() {
     @media (max-width: 767px) {
         .cid-u6Mcis6gLv .image-wrapper {
             flex-direction: column;
+      
         }
 
         .cid-u6Mcis6gLv .image-wrapper img {
-            margin: auto;
+            margin: auto
+            height: auto; /* This ensures the image maintains its aspect ratio */
+        object-fit: contain; /* This makes sure the image scales down to fit within its container without being cropped */
             margin-bottom: 1rem;
         }
     }
