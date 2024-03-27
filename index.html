@@ -955,6 +955,7 @@ window.onload = function() {
         </div>
     </section>
   <style>
+<style>
     .cid-u6Mcis6gLv {
         padding-top: 5rem;
         padding-bottom: 5rem;
@@ -978,13 +979,12 @@ window.onload = function() {
     @media (max-width: 767px) {
         .cid-u6Mcis6gLv .image-wrapper {
             flex-direction: column;
-      
         }
 
         .cid-u6Mcis6gLv .image-wrapper img {
-            margin: auto
+            margin: auto;
             height: auto; /* This ensures the image maintains its aspect ratio */
-        object-fit: contain; /* This makes sure the image scales down to fit within its container without being cropped */
+            object-fit: contain; /* This makes sure the image scales down to fit within its container without being cropped */
             margin-bottom: 1rem;
         }
     }
@@ -999,8 +999,8 @@ window.onload = function() {
     .cid-u6Mcis6gLv img,
     .cid-u6Mcis6gLv .item-img {
         width: 100%;
-        height: 400px;
-        object-fit: cover;
+        height: auto; /* Adjusted to auto to maintain aspect ratio */
+        object-fit: contain; /* Ensures the image scales down without cropping */
     }
 
     .cid-u6Mcis6gLv .card-wrapper {
