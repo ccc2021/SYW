@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="shortcut icon" href="assets/images/logo.gif" type="image/x-icon">
     <link rel="icon" href="assets/images/logo.gif">
-    <meta name="description" content="吳頌揚提供專業房屋仲介服務，包括房屋土地估價、銷售等。雲林在地住商不動產團隊，獨家精選雲林房屋土地，幫您規劃悠閑享受雲林退休生活。提供專業不動產買賣服務、專業在地房仲，專營雲林房屋、雲林土地、農地農舍買賣。創造幸福找住商不動產雲林住福團隊，住商雲林加盟店" />
+    <meta name="description"
+        content="吳頌揚提供專業房屋仲介服務，包括房屋土地估價、銷售等。雲林在地住商不動產團隊，獨家精選雲林房屋土地，幫您規劃悠閑享受雲林退休生活。提供專業不動產買賣服務、專業在地房仲，專營雲林房屋、雲林土地、農地農舍買賣。創造幸福找住商不動產雲林住福團隊，住商雲林加盟店" />
     <meta property="og:site_name" content="吳頌揚|住福團隊|住商不動產">
     <meta property="og:url" content="https://sung-yang.com/">
     <meta property="og:title" content="吳頌揚|雲林縣買屋賣屋|住商不動產">
@@ -23,106 +24,132 @@
     <link rel="stylesheet" href="assets/animatecss/animate.css">
     <link rel="stylesheet" href="assets/theme/css/style.css">
     <link rel="stylesheet" href="assets/theme/css/all.css">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" as="style" href="assets/mobirise/css/additional.css">
     <link rel="stylesheet" href="assets/mobirise/css/additional.css" type="text/css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
 
 
-  <style>
-    /* 加載動畫樣式 */
-    #loading-animation {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #F0E68C; /* 淺黃色 */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      color: #008000; /* 綠色 */
-      overflow: hidden;
-    }
+    <style>
+        /* 加載動畫樣式 */
+        #loading-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #F0E68C;
+            /* 淺黃色 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            color: #008000;
+            /* 綠色 */
+            overflow: hidden;
+        }
 
-    #loading-animation .spinner {
-      font-size: 10vmin;
-      animation: spin 2s infinite linear, pulse 1s infinite;
-    }
+        #loading-animation .spinner {
+            font-size: 10vmin;
+            animation: spin 2s infinite linear, pulse 1s infinite;
+        }
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
-    }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
-    /* 雲朵樣式 */
-    #loading-animation .cloud {
-      position: absolute;
-      top: 10%;
-      left: 50%;
-      width: 300px;
-      height: 90px;
-      background-color: #fff;
-      border-radius: 75px;
-      box-shadow: 30px 30px 0 20px #fff;
-      animation: cloud 20s infinite linear;
-    }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
 
-    @keyframes cloud {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
+            50% {
+                transform: scale(1.2);
+            }
 
-    /* 加載條樣式 */
-    #loading-bar {
-      width: 80%;
-      height: 25px;
-      background-color: rgba(255, 255, 255, 0.3);
-      border-radius: 12.5px;
-      overflow: hidden;
-    }
+            100% {
+                transform: scale(1);
+            }
+        }
 
-    #loading-bar::before {
-      content: "";
-      display: block;
-      width: 0%;
-      height: 100%;
-      background-color: #008000;
-      animation: loading 3s linear forwards;
-    }
+        /* 雲朵樣式 */
+        #loading-animation .cloud {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            width: 300px;
+            height: 90px;
+            background-color: #fff;
+            border-radius: 75px;
+            box-shadow: 30px 30px 0 20px #fff;
+            animation: cloud 20s infinite linear;
+        }
 
-    @keyframes loading {
-      0% { width: 0%; }
-      100% { width: 100%; }
-    }
+        @keyframes cloud {
+            0% {
+                transform: translateX(-100%);
+            }
 
-    /* 加載中文字樣式 */
-    #loading-text {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      text-align: center;
-    }
+            100% {
+                transform: translateX(100%);
+            }
+        }
 
-    /* 服務標語樣式 */
-    #service-slogan {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      text-align: center;
-    }
+        /* 加載條樣式 */
+        #loading-bar {
+            width: 80%;
+            height: 25px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 12.5px;
+            overflow: hidden;
+        }
 
-    /* 隱藏網頁內容 */
-    #content {
-      display: none;
-    }
+        #loading-bar::before {
+            content: "";
+            display: block;
+            width: 0%;
+            height: 100%;
+            background-color: #008000;
+            animation: loading 3s linear forwards;
+        }
+
+        @keyframes loading {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        /* 加載中文字樣式 */
+        #loading-text {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        /* 服務標語樣式 */
+        #service-slogan {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        /* 隱藏網頁內容 */
+        #content {
+            display: none;
+        }
 
 
         :root {
@@ -143,27 +170,26 @@
             --warning-text: #000000;
             --info-text: #000000;
         }
-
     </style>
 </head>
 
 <div>
- <div id="loading-animation">
-    <div class="spinner">&#x1F334;</div> 
-    <div id="loading-bar"></div>
-    <div class="cloud"></div>
-    <div id="loading-text">載入中...</div>
-    <div id="service-slogan">頌揚誠摯為您服務</div>
-  </div>
+    <div id="loading-animation">
+        <div class="spinner">&#x1F334;</div>
+        <div id="loading-bar"></div>
+        <div class="cloud"></div>
+        <div id="loading-text">載入中...</div>
+        <div id="service-slogan">頌揚誠摯為您服務</div>
+    </div>
 
 
- <script>
-window.onload = function() {
-    document.getElementById('loading-animation').style.display = 'none';
-    document.getElementById('content').style.display = 'block';
-}
-    document.getElementById('content').style.display = 'none';
-</script>
+    <script>
+        window.onload = function () {
+            document.getElementById('loading-animation').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+        document.getElementById('content').style.display = 'none';
+    </script>
 
 
     <style>
@@ -833,7 +859,6 @@ window.onload = function() {
                 padding: 1rem;
             }
         }
-
     </style>
 
     <section class="menu menu2 cid-u6Mcis5LAA" once="menu" id="menu-5-u6Mcis5LAA">
@@ -849,7 +874,9 @@ window.onload = function() {
                         <a class="navbar-caption text-black display-4" href="https://www.jufuoffical.com">住福團隊-吳頌揚</a>
                     </span>
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+                    data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <div class="hamburger">
                         <span></span>
                         <span></span>
@@ -863,13 +890,16 @@ window.onload = function() {
                             <a class="nav-link link text-black display-4" href="#about-us-1-u6Mcis6gLv">關於頌揚</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#buyHouse" aria-expanded="false">雲林買房</a>
+                            <a class="nav-link link text-black display-4" href="#buyHouse"
+                                aria-expanded="false">雲林買房</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#sellHouse" aria-expanded="false">雲林賣房</a>
+                            <a class="nav-link link text-black display-4" href="#sellHouse"
+                                aria-expanded="false">雲林賣房</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link text-black display-4" href="#testimonials-1-u6Mcis7h9p" aria-expanded="false">成交案例</a>
+                            <a class="nav-link link text-black display-4" href="#testimonials-1-u6Mcis7h9p"
+                                aria-expanded="false">成交案例</a>
                         </li>
                     </ul>
                     <div class="navbar-buttons mbr-section-btn">
@@ -879,7 +909,7 @@ window.onload = function() {
             </div>
         </nav>
     </section>
-  
+
 
     <style>
         .cid-u6Mcis5FWr {
@@ -937,7 +967,6 @@ window.onload = function() {
         .cid-u6Mcis5FWr .mbr-section-btn {
             text-align: center;
         }
-
     </style>
 
     <section class="header16 cid-u6Mcis5FWr mbr-fullscreen mbr-parallax-background" id="hero-17-u6Mcis5FWr">
@@ -954,203 +983,222 @@ window.onload = function() {
             </div>
         </div>
     </section>
-  <style>
-<style>
-    .cid-u6Mcis6gLv {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-        background-color: transparent;
-    }
-
-    .cid-u6Mcis6gLv .mbr-fallback-image.disabled {
-        display: none;
-    }
-
-    .cid-u6Mcis6gLv .mbr-fallback-image {
-        display: block;
-        background-size: cover;
-        background-position: center center;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-    }
-
-    @media (max-width: 767px) {
-        .cid-u6Mcis6gLv .image-wrapper {
-            flex-direction: column;
+    <style>
+        <style>.cid-u6Mcis6gLv {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            background-color: transparent;
         }
 
-        .cid-u6Mcis6gLv .image-wrapper {
-            width: 100%;
-            height: 0;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            position: relative;
+        .cid-u6Mcis6gLv .mbr-fallback-image.disabled {
+            display: none;
         }
 
-        .cid-u6Mcis6gLv .image-wrapper img {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .cid-u6Mcis6gLv .mbr-fallback-image {
+            display: block;
+            background-size: cover;
+            background-position: center center;
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Ensures the image scales down without cropping */
+            position: absolute;
+            top: 0;
         }
-    }
 
-    .cid-u6Mcis6gLv .card-box {
-        max-width: 750px;
-        padding-top: 2rem;
-        margin-left: auto;
-        margin-right: 0;
-    }
+        @media (max-width: 767px) {
+            .cid-u6Mcis6gLv .image-wrapper {
+                flex-direction: column;
+            }
 
-    .cid-u6Mcis6gLv img,
-    .cid-u6Mcis6gLv .item-img {
-        width: 100%;
-        height: auto; /* Adjusted to auto to maintain aspect ratio */
-        object-fit: contain; /* Ensures the image scales down without cropping */
-    }
+            .cid-u6Mcis6gLv .image-wrapper {
+                width: 100%;
+                height: 0;
+                padding-bottom: 56.25%;
+                /* 16:9 Aspect Ratio */
+                position: relative;
+            }
 
-    .cid-u6Mcis6gLv .card-wrapper {
-        background: #ffffff;
-    }
-
-    .cid-u6Mcis6gLv .mbr-text,
-    .cid-u6Mcis6gLv .mbr-section-btn {
-        color: #000000;
-    }
-
-    .cid-u6Mcis6gLv .card-title,
-    .cid-u6Mcis6gLv .card-box {
-        color: #232323;
-    }
-
-    @media (max-width: 767px) {
-        .cid-u6Mcis6gLv .card-content-text {
-            padding: 2rem 1.5rem;
-            margin-bottom: 1rem;
+            .cid-u6Mcis6gLv .image-wrapper img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                /* Ensures the image scales down without cropping */
+            }
         }
-    }
 
-    @media (min-width: 768px) and (max-width: 991px) {
-        .cid-u6Mcis6gLv .card-content-text {
-            padding: 2.25rem;
+        .cid-u6Mcis6gLv .card-box {
+            max-width: 750px;
+            padding-top: 2rem;
+            margin-left: auto;
+            margin-right: 0;
         }
-    }
 
-    @media (min-width: 992px) {
-        .cid-u6Mcis6gLv .card-content-text {
-            padding: 4rem;
+        .cid-u6Mcis6gLv img,
+        .cid-u6Mcis6gLv .item-img {
+            width: 100%;
+            height: auto;
+            /* Adjusted to auto to maintain aspect ratio */
+            object-fit: contain;
+            /* Ensures the image scales down without cropping */
         }
-    }
-</style>
+
+        .cid-u6Mcis6gLv .card-wrapper {
+            background: #ffffff;
+        }
+
+        .cid-u6Mcis6gLv .mbr-text,
+        .cid-u6Mcis6gLv .mbr-section-btn {
+            color: #000000;
+        }
+
+        .cid-u6Mcis6gLv .card-title,
+        .cid-u6Mcis6gLv .card-box {
+            color: #232323;
+        }
+
+        @media (max-width: 767px) {
+            .cid-u6Mcis6gLv .card-content-text {
+                padding: 2rem 1.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            .cid-u6Mcis6gLv .card-content-text {
+                padding: 2.25rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .cid-u6Mcis6gLv .card-content-text {
+                padding: 4rem;
+            }
+        }
+    </style>
 
 
-<section class="article01 cid-u6Mcis6gLv" id="about-us-1-u6Mcis6gLv">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="card col-md-12 col-lg-12">
-                <div class="card-wrapper">
-                    <div class="row">
-                        <div class="image-wrapper col-12 col-sm-12 justify-content-center">
-                            <img src="assets/images/IMG.JPG">
+    <section class="article01 cid-u6Mcis6gLv" id="about-us-1-u6Mcis6gLv">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="card col-md-12 col-lg-12">
+                    <div class="card-wrapper">
+                        <div class="row">
+                            <div class="image-wrapper col-12 col-sm-12 justify-content-center">
+                                <img src="assets/images/IMG.JPG">
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="card-box align-left mb-3 card-content-text">
+                            <h4 class="card-title mbr-fonts-style mbr-white mb-0 display-5">
+                                <strong>關於頌揚</strong>
+                            </h4>
+                            <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-7">
+                                雲林斗六人 </p>
+                            <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-7">
+                                年輕 積極 有衝勁 </p>
+                            </p>
+                            <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-7">
+                                善用社群網路 </p>
+                            </p>
 
-                    <div class="card-box align-left mb-3 card-content-text">
-                        <h4 class="card-title mbr-fonts-style mbr-white mb-0 display-5">
-                            <strong>關於頌揚</strong>
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-7">
-                            雲林斗六人 </p>
-                        <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-7">
-                            年輕 積極 有衝勁 </p>
-                        </p>
-                        <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-7">
-                            善用社群網路 </p>
-                        </p>
+                            <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-7">
+                                設計精美宣傳單 </p>
+                            </p>
 
-                        <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-7">
-                            設計精美宣傳單 </p>
-                        </p>
-
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <div class="py-16 xs:pt-7 xs:pb-5">
         <div id="buyHouse" class="flex items-stretch xs:flex-col xs:items-center mb-24 xs:mb-7">
-            <div class="mr-14 md:mr-8 left-side xs:order-1 xs:mr-0 xs:w-full aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
+            <div class="mr-14 md:mr-8 left-side xs:order-1 xs:mr-0 xs:w-full aos-init aos-animate" data-aos="fade-right"
+                data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true"
+                data-aos-once="false">
                 <div class="max-w-xs ml-auto mb-10 xs:mx-auto xs:max-w-full xs:w-9/12">
                     <h2 class="title font-medium text-gn-200 mb-8 xs:mb-2">雲林買房</h2>
                     <p class="subtitle text-left">找尋合適您的房子</p>
                     <p class="subtitle text-right mr-4 mb-14 md:mr-20 xs:mb-5"></p>
-                    <h3 class="text-right mr-4 md:mr-0">透天  ‧  店面  ‧ 土地</h3>
+                    <h3 class="text-right mr-4 md:mr-0">透天 ‧ 店面 ‧ 土地</h3>
                 </div>
-                <a href="https://www.rakuya.com.tw/store/my/659531" target="_blank" class="flex justify-end items-center bg-gn-200 text-white py-3" id="seemore">
+                <a href="https://www.rakuya.com.tw/store/my/659531" target="_blank"
+                    class="flex justify-end items-center bg-gn-200 text-white py-3" id="seemore">
                     <span class="text-3xl font-serif pointer-events-none">馬上看物件&rarr;</span>
-                   
+
                 </a>
             </div>
-            <div class="right-side xs:mb-5 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
-                <img src="assets/images/photo-1600585154340-be6161a56a0c.jpeg" class="max-h-96 md:h-full w-full object-cover" alt="雲林買房-房屋農地物件搜尋">
+            <div class="right-side xs:mb-5 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100"
+                data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
+                <img src="assets/images/photo-1600585154340-be6161a56a0c.jpeg"
+                    class="max-h-96 md:h-full w-full object-cover" alt="雲林買房-房屋農地物件搜尋">
             </div>
         </div>
         <div id="sellHouse" class="flex items-stretch xs:flex-col xs:items-center">
-            <div class="mr-14 md:mr-8 left-side xs:order-1 xs:mr-0 xs:w-full aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
+            <div class="mr-14 md:mr-8 left-side xs:order-1 xs:mr-0 xs:w-full aos-init aos-animate" data-aos="fade-right"
+                data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true"
+                data-aos-once="false">
                 <div class="max-w-xs ml-auto mb-10 xs:mx-auto xs:max-w-full xs:w-9/12">
                     <h2 class="title font-medium text-gn-200 mb-8 xs:mb-2">雲林賣房</h2>
                     <p class="subtitle" style="text-align: left;">不動產估價</p>
                     <p class="subtitle text-right mr-4 mb-14 md:mr-10">—專業市場分析</p>
                     <h3 class="text-left md:text-left md:mr-0">專任委託 快速配對<br>大量廣告曝光</h3>
                 </div>
-                <a href="https://line.me/ti/p/_ix1jviwYx" target="_blank" class="flex justify-end items-center bg-gn-200 text-white py-3" id="contact-propertyvaluer">
+                <a href="https://line.me/ti/p/_ix1jviwYx" target="_blank"
+                    class="flex justify-end items-center bg-gn-200 text-white py-3" id="contact-propertyvaluer">
                     <span class="text-3xl font-serif pointer-events-none">專家估價諮詢&rarr＆9758;</span>
-                  
+
                 </a>
             </div>
-            <div class="right-side xs:mb-5 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
-                <img src="assets/images/photo-1493809842364-78817add7ffb.jpeg" class="max-h-96 md:h-full w-full object-cover object-bottom" alt="雲林賣房-房屋農地不動產實價登錄-雲林房價諮詢">
+            <div class="right-side xs:mb-5 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100"
+                data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
+                <img src="assets/images/photo-1493809842364-78817add7ffb.jpeg"
+                    class="max-h-96 md:h-full w-full object-cover object-bottom" alt="雲林賣房-房屋農地不動產實價登錄-雲林房價諮詢">
             </div>
         </div>
     </div>
-   
+
 </div>
 
 <style>
-.item-img {
-    position: relative; 
-}
+    .item-img {
+        position: relative;
+    }
 
-.item-img::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* 半透明白色遮罩 */
-    z-index: 1; /* 確保遮罩位於圖片和文字之下 */
-    pointer-events: none; /* 允許點擊事件穿過遮罩元素 */
-}
+    .item-img::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+        /* 半透明白色遮罩 */
+        z-index: 1;
+        /* 確保遮罩位於圖片和文字之下 */
+        pointer-events: none;
+        /* 允許點擊事件穿過遮罩元素 */
+    }
 
-.text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    color: black; /* 文字顏色改為黑色 */
-    font-size: 24px; /* 根據需要調整字體大小 */
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字陰影效果 */
-    z-index: 2; /* 確保文字位於遮罩之上 */
-}
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        /* 文字顏色改為黑色 */
+        font-size: 24px;
+        /* 根據需要調整字體大小 */
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        /* 文字陰影效果 */
+        z-index: 2;
+    }
 
-    
+
     .cid-u6Mcis6vwP {
         padding-top: 5rem;
         padding-bottom: 5rem;
@@ -1163,11 +1211,12 @@ window.onload = function() {
     }
 
     .cid-u6Mcis6vwP img,
-    .cid-u6Mcis6vwP  .item-img img {
-    width: 100%; 
-    height: auto;
-    object-fit: cover; /* 確保圖片不會失真 */
-}
+    .cid-u6Mcis6vwP .item-img img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        /* 確保圖片不會失真 */
+    }
 
     .cid-u6Mcis6vwP .item:focus,
     .cid-u6Mcis6vwP span:focus {
@@ -1212,28 +1261,28 @@ window.onload = function() {
 
 
     /* 針對手機螢幕 */
-@media (max-width: 575px) {
-    .item-img img {
-        width: 100%;
-        height: auto;
+    @media (max-width: 575px) {
+        .item-img img {
+            width: 100%;
+            height: auto;
+        }
     }
-}
 
-/* 針對平板螢幕 */
-@media (min-width: 576px) and (max-width: 767px) {
-    .item-img img {
-        width: 100%;
-        height: auto;
+    /* 針對平板螢幕 */
+    @media (min-width: 576px) and (max-width: 767px) {
+        .item-img img {
+            width: 100%;
+            height: auto;
+        }
     }
-}
 
-/* 針對桌面螢幕 */
-@media (min-width: 768px) {
-    .item-img img {
-        width: 400px;
-        height: auto;
+    /* 針對桌面螢幕 */
+    @media (min-width: 768px) {
+        .item-img img {
+            width: 400px;
+            height: auto;
+        }
     }
-}
 </style>
 <section class="features03 cid-u6Mcis6vwP" id="partners-1-u6Mcis6vwP">
     <div class="container-fluid">
@@ -1274,7 +1323,7 @@ window.onload = function() {
 
 
 
-    
+
 <style>
     .cid-u6Mcis5bXN {
         padding-top: 6rem;
@@ -1308,7 +1357,6 @@ window.onload = function() {
             min-height: 45px;
         }
     }
-
 </style>
 <section class="gallery10 cid-u6Mcis5bXN" id="features-69-u6Mcis5bXN">
     <div class="container-fluid">
@@ -1324,12 +1372,6 @@ window.onload = function() {
         </div>
     </div>
 </section>
-
-
-
-
-
-
 
 
 <style>
@@ -1484,14 +1526,14 @@ window.onload = function() {
     .cid-u6Mcis7h9p .user_name {
         color: #000000;
     }
-
 </style>
 <section class="slider2 mbr-embla cid-u6Mcis7h9p" id="testimonials-1-u6Mcis7h9p">
     <div class="position-relative text-center">
-        <div class="embla" data-skip-snaps="true" data-align="center" data-auto-play="true" data-auto-play-interval="5" data-draggable="true">
+        <div class="embla" data-skip-snaps="true" data-align="center" data-auto-play="true" data-auto-play-interval="5"
+            data-draggable="true">
             <div class="embla__viewport container-fluid">
                 <div class="embla__container">
-                    
+
                     <div class="embla__slide slider-image item" style="margin: auto;">
                         <div class="user">
                             <div class="user_image">
@@ -1516,7 +1558,8 @@ window.onload = function() {
                 </div>
             </div>
         </div>
-        <a href="https://www.google.com/search?hl=zh-TW&gl=tw&q=住商-住福團隊吳頌揚#lrd=0x346eb9553b8168e5:0xe1b7b5714d9ff1a4,1" target="_blank" class="block text-center text-readMore text-gn-100 mb-16">看更多客戶好評 >>>
+        <a href="https://www.google.com/search?hl=zh-TW&gl=tw&q=住商-住福團隊吳頌揚#lrd=0x346eb9553b8168e5:0xe1b7b5714d9ff1a4,1"
+            target="_blank" class="block text-center text-readMore text-gn-100 mb-16">看更多客戶好評 >>>
         </a>
     </div>
 
@@ -1529,7 +1572,7 @@ window.onload = function() {
         border-radius: 50%;
         width: 50px;
         height: 50px;
-       
+
         line-height: 50px;
 
         text-align: center;
@@ -1568,7 +1611,6 @@ window.onload = function() {
         right: 20px;
     }
 
-    /* 不显示特定元素中的图标 */
     #hero-17-u6Mcis5FWr .iconfont-wrapper {
         display: none !important;
     }
@@ -1577,12 +1619,9 @@ window.onload = function() {
     @media (max-width: 768px) {
         .cid-u6Mcis815S .social-list {
             display: flex !important;
-            /* 確保使用 flex 布局 */
             flex-direction: row !important;
-            /* 確保圖標橫向排列 */
             justify-content: center;
             align-items: center;
-            /* 垂直置中圖標 */
             background-color: transparent;
             padding: 0;
             margin: 0;
@@ -1633,7 +1672,6 @@ window.onload = function() {
             color: white;
         }
     }
-
 </style>
 
 <section class="social4 cid-u6Mcis815S" id="follow-us-1-u6Mcis815S">
@@ -1642,10 +1680,12 @@ window.onload = function() {
             <div class="col-12">
                 <h3 class="mbr-section-title align-center mb-5 mbr-fonts-style display-2"></h3>
                 <div class="social-list align-center">
-                    <a class="iconfont-wrapper bg-facebook m-2" target="_blank" href="https://www.facebook.com/profile.php?id=100064031046011&mibextid=opq0tG">
+                    <a class="iconfont-wrapper bg-facebook m-2" target="_blank"
+                        href="https://www.facebook.com/profile.php?id=100064031046011&mibextid=opq0tG">
                         <span class="socicon-facebook socicon"></span>
                     </a>
-                    <a class="iconfont-wrapper bg-youtube m-2" target="_blank" href="https://www.youtube.com/channel/UC7UeefqFmLzQ9HD6_R81G4w/videos">
+                    <a class="iconfont-wrapper bg-youtube m-2" target="_blank"
+                        href="https://www.youtube.com/channel/UC7UeefqFmLzQ9HD6_R81G4w/videos">
                         <span class="socicon-youtube socicon"></span>
                     </a>
                     <a class="iconfont-wrapper bg-line m-2" target="_blank" href="https://line.me/ti/p/_ix1jviwYx">
@@ -1717,7 +1757,6 @@ window.onload = function() {
     .cid-u6Mcis8Giv .content-head {
         max-width: 800px;
     }
-
 </style>
 <section class="contacts01 cid-u6Mcis8Giv" id="contacts-1-u6Mcis8Giv">
     <div class="container">
@@ -1839,7 +1878,6 @@ window.onload = function() {
     .cid-u6Mcis8i0i .mbr-section-title {
         color: #ffffff;
     }
-
 </style>
 <section class="footer3 cid-u6Mcis8i0i" once="footers" id="footer-6-u6Mcis8i0i">
     <div class="container">
@@ -1881,7 +1919,7 @@ window.onload = function() {
 <script src="assets/formoid/formoid.min.js"></script>
 
 <script>
-    (function() {
+    (function () {
         var animationInput = document.createElement('input');
         animationInput.setAttribute('name', 'animation');
         animationInput.setAttribute('type', 'hidden');
@@ -1889,9 +1927,12 @@ window.onload = function() {
     })();
 
 </script>
-<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool' md5='xxx' url='xxx' tk-name='xxx' interval='xxx' disable-menu='xxx' detectors='xxx' clear-log='true' disable-select='true' disable-copy='true' disable-cut='true' disable-paste='true'></script>
+<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool' md5='xxx' url='xxx' tk-name='xxx'
+    interval='xxx' disable-menu='xxx' detectors='xxx' clear-log='true' disable-select='true' disable-copy='true'
+    disable-cut='true' disable-paste='true'></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="assets/theme/js/index.js"></script>
 
 </body>
