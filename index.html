@@ -1020,7 +1020,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: contain; /* 確保圖片不會被裁剪 */
+            object-fit: contain; /* 確保圖片等比例縮放且不裁切 */
         }
     }
 
@@ -1039,7 +1039,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* 確保圖片覆蓋整個容器 */
+            object-fit: contain; /* 確保圖片等比例縮放且不裁切 */
         }
     }
 
@@ -1058,7 +1058,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* 確保圖片覆蓋整個容器 */
+            object-fit: contain; /* 確保圖片等比例縮放且不裁切 */
         }
     }
 
@@ -1073,7 +1073,7 @@
     .cid-u6Mcis6gLv .item-img {
         width: 100%;
         height: auto;
-        object-fit: contain;
+        object-fit: contain; /* 確保圖片等比例縮放且不裁切 */
     }
 
     .cid-u6Mcis6gLv .card-wrapper {
@@ -1110,6 +1110,8 @@
         }
     }
 </style>
+
+
 
 
     <section class="article01 cid-u6Mcis6gLv" id="about-us-1-u6Mcis6gLv">
