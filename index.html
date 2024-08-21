@@ -1,17 +1,180 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>住商不動產-吳頌揚</title>
-    <meta name="description" content="吳頌揚提供專業房屋仲介服務，包括房屋土地估價、銷售等。雲林在地住商不動產團隊，獨家精選雲林房屋土地，幫您規劃悠閒享受雲林退休生活。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="吳頌揚|住福團隊|住商不動產">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="shortcut icon" href="assets/images/logo.gif" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="icon" href="assets/images/logo.gif">
+    <meta name="description"
+        content="吳頌揚提供專業房屋仲介服務，包括房屋土地估價、銷售等。雲林在地住商不動產團隊，獨家精選雲林房屋土地，幫您規劃悠閑享受雲林退休生活。提供專業不動產買賣服務、專業在地房仲，專營雲林房屋、雲林土地、農地農舍買賣。創造幸福找住商不動產雲林住福團隊，住商雲林加盟店" />
+    <meta property="og:site_name" content="吳頌揚|住福團隊|住商不動產">
+    <meta property="og:url" content="https://sung-yang.com/">
+    <meta property="og:title" content="吳頌揚|雲林縣買屋賣屋|住商不動產">
+    <title>住商不動產-吳頌揚</title>
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+    <link rel="stylesheet" href="assets/parallax/jarallax.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="assets/animatecss/animate.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="stylesheet" href="assets/theme/css/all.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="assets/mobirise/css/additional.css">
+    <link rel="stylesheet" href="assets/mobirise/css/additional.css" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+
+
+    <style>
+        /* 加載動畫樣式 */
+        #loading-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #F0E68C;
+            /* 淺黃色 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            color: #008000;
+            /* 綠色 */
+            overflow: hidden;
+        }
+
+        #loading-animation .spinner {
+            font-size: 10vmin;
+            animation: spin 2s infinite linear, pulse 1s infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* 雲朵樣式 */
+        #loading-animation .cloud {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            width: 300px;
+            height: 90px;
+            background-color: #fff;
+            border-radius: 75px;
+            box-shadow: 30px 30px 0 20px #fff;
+            animation: cloud 20s infinite linear;
+        }
+
+        @keyframes cloud {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        /* 加載條樣式 */
+        #loading-bar {
+            width: 80%;
+            height: 25px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 12.5px;
+            overflow: hidden;
+        }
+
+        #loading-bar::before {
+            content: "";
+            display: block;
+            width: 0%;
+            height: 100%;
+            background-color: #008000;
+            animation: loading 3s linear forwards;
+        }
+
+        @keyframes loading {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        /* 加載中文字樣式 */
+        #loading-text {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        /* 服務標語樣式 */
+        #service-slogan {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        /* 隱藏網頁內容 */
+        #content {
+            display: none;
+        }
+
+
+        :root {
+            --background: #E8F0F2;
+            --dominant-color: #16697A;
+            --primary-color: #82C0CC;
+            --secondary-color: #F3AB54;
+            --success-color: #3FDC93;
+            --danger-color: #DD3E4D;
+            --warning-color: #FFC61C;
+            --info-color: #28D1F3;
+            --background-text: #000000;
+            --dominant-text: #FFFFFF;
+            --primary-text: #000000;
+            --secondary-text: #000000;
+            --success-text: #000000;
+            --danger-text: #FFFFFF;
+            --warning-text: #000000;
+            --info-text: #000000;
+        }
+    </style>
 </head>
-<body>
-    <div id="loading-animation" class="loading-overlay">
+
+<div>
+    <div id="loading-animation">
         <div class="spinner">&#x1F334;</div>
         <div id="loading-bar"></div>
         <div class="cloud"></div>
@@ -19,173 +182,1759 @@
         <div id="service-slogan">頌揚誠摯為您服務</div>
     </div>
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+    <script>
+        window.onload = function () {
+            document.getElementById('loading-animation').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+        document.getElementById('content').style.display = 'none';
+    </script>
+
+
+    <style>
+        .cid-u6Mcis5LAA {
+            z-index: 1000;
+            width: 100%;
+            position: relative;
+        }
+
+        .cid-u6Mcis5LAA .dropdown-item:before {
+            font-family: Moririse2 !important;
+            content: "\e966";
+            display: inline-block;
+            width: 0;
+            position: absolute;
+            left: 1rem;
+            top: 0.5rem;
+            margin-right: 0.5rem;
+            line-height: 1;
+            font-size: inherit;
+            vertical-align: middle;
+            text-align: center;
+            overflow: hidden;
+            transform: scale(0, 1);
+            transition: all 0.25s ease-in-out;
+        }
+
+        @media (max-width: 767px) {
+            .cid-u6Mcis5LAA .navbar-toggler {
+                transform: scale(0.8);
+            }
+        }
+
+        .cid-u6Mcis5LAA .navbar-brand {
+            flex-shrink: 0;
+            align-items: center;
+            margin-right: 0;
+            padding: 10px 0;
+            transition: all 0.3s;
+            word-break: break-word;
+            z-index: 1;
+        }
+
+        .cid-u6Mcis5LAA .navbar-brand img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .cid-u6Mcis5LAA .navbar-brand .navbar-caption {
+            line-height: inherit !important;
+        }
+
+        .cid-u6Mcis5LAA .navbar-brand .navbar-logo a {
+            outline: none;
+        }
+
+        .cid-u6Mcis5LAA .navbar-nav {
+            margin: auto;
+            margin-left: 0;
+            margin-left: auto;
+        }
+
+        .cid-u6Mcis5LAA .navbar-nav .nav-item {
+            padding: 0 !important;
+            transition: 0.3s all !important;
+        }
+
+        .cid-u6Mcis5LAA .navbar-nav .nav-item .nav-link {
+            padding: 16px !important;
+            margin: 0 !important;
+            border-radius: 1rem !important;
+            transition: 0.3s all !important;
+        }
+
+        .cid-u6Mcis5LAA .navbar-nav .nav-item .nav-link:hover {
+            background-color: rgba(27, 31, 10, 0.06);
+        }
+
+        .cid-u6Mcis5LAA .navbar-nav .open .nav-link::after {
+            transform: rotate(180deg);
+        }
+
+        @media (min-width: 992px) {
+            .cid-u6Mcis5LAA .navbar-nav .open .nav-link::before {
+                content: "";
+                width: 100%;
+                height: 20px;
+                top: 100%;
+                background: transparent;
+                position: absolute;
+            }
+        }
+
+        .cid-u6Mcis5LAA .navbar-nav .dropdown-item {
+            padding: 12px !important;
+            border-radius: 0.5rem !important;
+            margin: 0 8px !important;
+            transition: 0.3s all !important;
+        }
+
+        .cid-u6Mcis5LAA .navbar-nav .dropdown-item:hover {
+            background-color: rgba(27, 31, 10, 0.06);
+        }
+
+        @media (min-width: 992px) {
+            .cid-u6Mcis5LAA .navbar-nav {
+                padding-left: 1.5rem;
+            }
+        }
+
+        .cid-u6Mcis5LAA .nav-link {
+            width: fit-content;
+            position: relative;
+        }
+
+        .cid-u6Mcis5LAA .navbar-logo {
+            margin: 0 !important;
+        }
+
+        @media (max-width: 767px) {
+            .cid-u6Mcis5LAA .navbar-logo {
+                padding-left: 0;
+            }
+        }
+
+        .cid-u6Mcis5LAA .navbar-caption {
+            padding-left: 1rem;
+            padding-right: 0.5rem;
+        }
+
+        @media (max-width: 767px) {
+            .cid-u6Mcis5LAA .nav-dropdown {
+                padding-bottom: 0.5rem;
+            }
+        }
+
+        .cid-u6Mcis5LAA .nav-dropdown .link.dropdown-toggle::after {
+            margin-left: 0.5rem;
+            margin-top: 0.2rem;
+            transition: 0.3s all;
+        }
+
+        .cid-u6Mcis5LAA .container {
+            display: flex;
+            height: 90px;
+            padding: 0.5rem 0.6rem;
+            flex-wrap: nowrap;
+            background: rgba(255, 255, 255, 0.8) !important;
+            left: 0;
+            right: 0;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: flex-end;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border-radius: 100vw;
+            margin-top: 1rem;
+            background-color: #ffffff;
+            box-shadow: 0 30px 60px 0 rgba(27, 31, 10, 0.08);
+        }
+
+        @media (max-width: 992px) {
+            .cid-u6Mcis5LAA .container {
+                padding-right: 2rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .cid-u6Mcis5LAA .container {
+                width: 95%;
+                height: 56px !important;
+                padding-right: 1rem;
+                margin-top: 0rem;
+            }
+        }
+
+        .cid-u6Mcis5LAA .iconfont-wrapper {
+            color: #000000 !important;
+            font-size: 1.5rem;
+            padding-right: 0.5rem;
+        }
+
+        .cid-u6Mcis5LAA .dropdown-menu {
+            flex-wrap: wrap;
+            flex-direction: column;
+            max-width: 100%;
+            padding: 12px 4px !important;
+            border-radius: 1.5rem;
+            transition: 0.3s all !important;
+            min-width: auto;
+            background: #ffffff;
+            background: rgba(255, 255, 255, 0.8) !important;
+        }
+
+        .cid-u6Mcis5LAA .nav-item:focus,
+        .cid-u6Mcis5LAA .nav-link:focus {
+            outline: none;
+        }
+
+        .cid-u6Mcis5LAA .dropdown .dropdown-menu .dropdown-item {
+            width: auto;
+            transition: all 0.25s ease-in-out;
+        }
+
+        .cid-u6Mcis5LAA .dropdown .dropdown-menu .dropdown-item::after {
+            right: 0.5rem;
+        }
+
+        .cid-u6Mcis5LAA .dropdown .dropdown-menu .dropdown-item .mbr-iconfont {
+            margin-right: 0.5rem;
+            vertical-align: sub;
+        }
+
+        .cid-u6Mcis5LAA .dropdown .dropdown-menu .dropdown-item .mbr-iconfont:before {
+            display: inline-block;
+            transform: scale(1, 1);
+            transition: all 0.25s ease-in-out;
+        }
+
+        .cid-u6Mcis5LAA .collapsed .dropdown-menu .dropdown-item:before {
+            display: none;
+        }
+
+        .cid-u6Mcis5LAA .collapsed .dropdown .dropdown-menu .dropdown-item {
+            padding: 0.235em 1.5em 0.235em 1.5em !important;
+            transition: none;
+            margin: 0 !important;
+        }
+
+        .cid-u6Mcis5LAA .navbar {
+            min-height: 90px;
+            transition: all 0.3s;
+            border-bottom: 1px solid transparent;
+            background: transparent !important;
+            padding: 0 !important;
+            border: none !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+        }
+
+        .cid-u6Mcis5LAA .navbar.opened {
+            transition: all 0.3s;
+        }
+
+        .cid-u6Mcis5LAA .navbar .dropdown-item {
+            padding: 0.5rem 1.8rem;
+        }
+
+        .cid-u6Mcis5LAA .navbar .navbar-logo img {
+            min-width: 6rem;
+            object-fit: cover;
+        }
+
+        .cid-u6Mcis5LAA .navbar .navbar-collapse {
+            z-index: 1;
+            justify-content: flex-end;
+        }
+
+        .cid-u6Mcis5LAA .navbar.collapsed {
+            justify-content: center;
+        }
+
+        .cid-u6Mcis5LAA .navbar.collapsed .nav-item .nav-link::before {
+            display: none;
+        }
+
+        .cid-u6Mcis5LAA .navbar.collapsed.opened .dropdown-menu {
+            top: 0;
+        }
+
+        @media (min-width: 992px) {
+            .cid-u6Mcis5LAA .navbar.collapsed.opened:not(.navbar-short) .navbar-collapse {
+                max-height: calc(98.5vh - 3rem);
+            }
+        }
+
+        .cid-u6Mcis5LAA .navbar.collapsed .dropdown-menu .dropdown-submenu {
+            left: 0 !important;
+        }
+
+        .cid-u6Mcis5LAA .navbar.collapsed .dropdown-menu .dropdown-item:after {
+            right: auto;
+        }
+
+        .cid-u6Mcis5LAA .navbar.collapsed .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
+            margin-left: 0.5rem;
+            margin-top: 0.2rem;
+            border-top: 0.35em solid;
+            border-right: 0.35em solid transparent;
+            border-left: 0.35em solid transparent;
+            border-bottom: 0;
+            top: 41%;
+        }
+
+        .cid-u6Mcis5LAA .navbar.collapsed ul.navbar-nav li {
+            margin: auto;
+        }
+
+        .cid-u6Mcis5LAA .navbar.collapsed .dropdown-menu .dropdown-item {
+            padding: 0.25rem 1.5rem;
+            text-align: center;
+        }
+
+        .cid-u6Mcis5LAA .navbar.collapsed .icons-menu {
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        @media (max-width: 767px) {
+            .cid-u6Mcis5LAA .navbar {
+                min-height: 72px;
+            }
+
+            .cid-u6Mcis5LAA .navbar .navbar-logo img {
+                height: 2.5rem !important;
+                min-width: 2.5rem !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .cid-u6Mcis5LAA .navbar .nav-item .nav-link::before {
+                display: none;
+            }
+
+            .cid-u6Mcis5LAA .navbar.opened .dropdown-menu {
+                top: 0;
+            }
+
+            .cid-u6Mcis5LAA .navbar .dropdown-menu .dropdown-submenu {
+                left: 0 !important;
+            }
+
+            .cid-u6Mcis5LAA .navbar .dropdown-menu .dropdown-item:after {
+                right: auto;
+            }
+
+            .cid-u6Mcis5LAA .navbar .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
+                margin-left: 0.5rem;
+                margin-top: 0.2rem;
+                border-top: 0.35em solid;
+                border-right: 0.35em solid transparent;
+                border-left: 0.35em solid transparent;
+                border-bottom: 0;
+                top: 40%;
+            }
+
+            .cid-u6Mcis5LAA .navbar .dropdown-menu .dropdown-item {
+                padding: 0.25rem 1.5rem !important;
+                text-align: center;
+            }
+
+            .cid-u6Mcis5LAA .navbar .navbar-brand {
+                flex-shrink: initial;
+                flex-basis: auto;
+                word-break: break-word;
+                padding-right: 10px;
+            }
+
+            .cid-u6Mcis5LAA .navbar .navbar-toggler {
+                flex-basis: auto;
+            }
+
+            .cid-u6Mcis5LAA .navbar .icons-menu {
+                padding-left: 0;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+        }
+
+        .cid-u6Mcis5LAA .navbar.navbar-short .navbar-logo img {
+            height: 2rem;
+        }
+
+        .cid-u6Mcis5LAA .dropdown-item.active,
+        .cid-u6Mcis5LAA .dropdown-item:active {
+            background-color: transparent;
+        }
+
+        .cid-u6Mcis5LAA .navbar-expand-lg .navbar-nav .nav-link {
+            padding: 0;
+        }
+
+        .cid-u6Mcis5LAA .nav-dropdown .link.dropdown-toggle {
+            margin-right: 1.667em;
+        }
+
+        .cid-u6Mcis5LAA .nav-dropdown .link.dropdown-toggle[aria-expanded="true"] {
+            margin-right: 0;
+            padding: 0.667em 1.667em;
+        }
+
+        .cid-u6Mcis5LAA .navbar.navbar-expand-lg .dropdown .dropdown-menu {
+            background: #ffffff;
+        }
+
+        .cid-u6Mcis5LAA .navbar.navbar-expand-lg .dropdown .dropdown-menu .dropdown-submenu {
+            margin: 0;
+            left: 105%;
+            transform: none;
+            top: -12px;
+        }
+
+        .cid-u6Mcis5LAA .navbar .dropdown.open>.dropdown-menu {
+            display: flex;
+        }
+
+        .cid-u6Mcis5LAA ul.navbar-nav {
+            flex-wrap: wrap;
+        }
+
+        .cid-u6Mcis5LAA .navbar-buttons {
+            text-align: center;
+            min-width: 140px;
+        }
+
+        @media (max-width: 992px) {
+            .cid-u6Mcis5LAA .navbar-buttons {
+                text-align: left;
+            }
+        }
+
+        .cid-u6Mcis5LAA button.navbar-toggler {
+            outline: none;
+            width: 31px;
+            height: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+            align-self: center;
+        }
+
+        .cid-u6Mcis5LAA button.navbar-toggler .hamburger span {
+            position: absolute;
+            right: 0;
+            width: 30px;
+            height: 2px;
+            border-right: 5px;
+            background-color: #000000;
+        }
+
+        .cid-u6Mcis5LAA button.navbar-toggler .hamburger span:nth-child(1) {
+            top: 0;
+            transition: all 0.2s;
+        }
+
+        .cid-u6Mcis5LAA button.navbar-toggler .hamburger span:nth-child(2) {
+            top: 8px;
+            transition: all 0.15s;
+        }
+
+        .cid-u6Mcis5LAA button.navbar-toggler .hamburger span:nth-child(3) {
+            top: 8px;
+            transition: all 0.15s;
+        }
+
+        .cid-u6Mcis5LAA button.navbar-toggler .hamburger span:nth-child(4) {
+            top: 16px;
+            transition: all 0.2s;
+        }
+
+        .cid-u6Mcis5LAA nav.opened .hamburger span:nth-child(1) {
+            top: 8px;
+            width: 0;
+            opacity: 0;
+            right: 50%;
+            transition: all 0.2s;
+        }
+
+        .cid-u6Mcis5LAA nav.opened .hamburger span:nth-child(2) {
+            transform: rotate(45deg);
+            transition: all 0.25s;
+        }
+
+        .cid-u6Mcis5LAA nav.opened .hamburger span:nth-child(3) {
+            transform: rotate(-45deg);
+            transition: all 0.25s;
+        }
+
+        .cid-u6Mcis5LAA nav.opened .hamburger span:nth-child(4) {
+            top: 8px;
+            width: 0;
+            opacity: 0;
+            right: 50%;
+            transition: all 0.2s;
+        }
+
+        .cid-u6Mcis5LAA .navbar-dropdown {
+            padding: 0 1rem;
+        }
+
+        .cid-u6Mcis5LAA a.nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cid-u6Mcis5LAA .icons-menu {
+            flex-wrap: nowrap;
+            display: flex;
+            justify-content: center;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 0.3rem;
+            text-align: center;
+        }
+
+        @media (max-width: 992px) {
+            .cid-u6Mcis5LAA .icons-menu {
+                justify-content: flex-start;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
+            .cid-u6Mcis5LAA .navbar {
+                height: 70px;
+            }
+
+            .cid-u6Mcis5LAA .navbar.opened {
+                height: auto;
+            }
+
+            .cid-u6Mcis5LAA .nav-item .nav-link:hover::before {
+                width: 175%;
+                max-width: calc(100% + 2rem);
+                left: -1rem;
+            }
+        }
+
+        .cid-u6Mcis5LAA .navbar .dropdown>.dropdown-menu {
+            display: none;
+            width: max-content;
+            max-width: 500px !important;
+            transform: translateX(-50%);
+            top: calc(100% + 20px);
+            left: 50%;
+        }
+
+        .cid-u6Mcis5LAA .navbar .dropdown>.dropdown-menu .dropdown-item {
+            line-height: 1 !important;
+        }
+
+        .cid-u6Mcis5LAA .navbar .dropdown>.dropdown-menu .dropdown .dropdown-item {
+            align-items: center;
+            display: flex;
+            height: max-content !important;
+            min-height: max-content !important;
+        }
+
+        .cid-u6Mcis5LAA .navbar .dropdown>.dropdown-menu .dropdown .dropdown-item::after {
+            display: inline-block;
+            position: static;
+            margin-left: 0.5rem;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            transition: 0.3s all;
+            transform: rotate(-90deg);
+        }
+
+        .cid-u6Mcis5LAA .navbar .dropdown>.dropdown-menu .dropdown.open .dropdown-item::after {
+            transform: rotate(0deg);
+        }
+
+        .cid-u6Mcis5LAA .mbr-section-btn {
+            margin: -0.6rem -0.6rem;
+        }
+
+        .cid-u6Mcis5LAA .navbar-toggler {
+            margin-left: 12px;
+            margin-right: 8px;
+            order: 1000;
+        }
+
+        @media (max-width: 991px) {
+            .cid-u6Mcis5LAA .navbar-brand {
+                margin-right: auto;
+            }
+
+            .cid-u6Mcis5LAA .navbar-collapse {
+                z-index: -1 !important;
+                position: absolute;
+                top: 110%;
+                left: 0;
+                width: 100%;
+                padding: 1rem;
+                border-radius: 1.5rem;
+                background: #ffffff;
+                opacity: 1;
+                border-color: rgba(255, 255, 255, 0.8) !important;
+                background: rgba(255, 255, 255, 0.8) !important;
+                backdrop-filter: blur(8px);
+            }
+
+            .cid-u6Mcis5LAA .navbar-nav .nav-item .nav-link::after {
+                margin-left: 10px;
+            }
+
+            .cid-u6Mcis5LAA .navbar-nav .dropdown-item:hover {
+                background-color: rgba(27, 31, 10, 0.06);
+            }
+
+            .cid-u6Mcis5LAA .navbar .dropdown>.dropdown-menu {
+                max-width: 100% !important;
+                transform: translateX(0);
+                top: 10px;
+                left: 0;
+                padding: 8px !important;
+                border-radius: 1rem;
+                background-color: rgba(27, 31, 10, 0.04) !important;
+            }
+
+            .cid-u6Mcis5LAA .navbar .dropdown>.dropdown-menu .dropdown-item {
+                padding: 8px !important;
+                line-height: 1 !important;
+                margin-bottom: 4px !important;
+            }
+
+            .cid-u6Mcis5LAA .navbar .dropdown>.dropdown-menu .dropdown .dropdown-item {
+                align-items: center;
+                display: flex;
+                height: max-content !important;
+                min-height: max-content !important;
+            }
+
+            .cid-u6Mcis5LAA .navbar .dropdown>.dropdown-menu .dropdown .dropdown-item::after {
+                display: inline-block;
+                position: static;
+                margin-left: 0.5rem;
+                margin-top: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                transition: 0.3s all;
+                transform: rotate(0deg);
+            }
+
+            .cid-u6Mcis5LAA .navbar .dropdown>.dropdown-menu .dropdown.open .dropdown-item::after {
+                transform: rotate(180deg);
+            }
+
+            .cid-u6Mcis5LAA .navbar .dropdown>.dropdown-menu .dropdown-submenu {
+                position: static;
+                width: 100%;
+                max-width: 100% !important;
+                transform: translateX(0) !important;
+                top: 0;
+                left: 0;
+                padding: 8px !important;
+                border-radius: 1rem;
+                background-color: rgba(27, 31, 10, 0.04) !important;
+            }
+
+            .cid-u6Mcis5LAA .navbar .dropdown.open>.dropdown-menu {
+                display: flex !important;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .cid-u6Mcis5LAA .navbar-collapse {
+                padding: 1rem;
+            }
+        }
+    </style>
+
+    <section class="menu menu2 cid-u6Mcis5LAA" once="menu" id="menu-5-u6Mcis5LAA">
+        <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="https://jufu520.com.tw/">
-                    <img src="assets/images/logom.png" alt="住福團隊-吳頌揚" height="69">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <div class="navbar-brand">
+                    <span class="navbar-logo">
+                        <a href="https://jufu520.com.tw/">
+                            <img src="assets/images/logom.png" style="height: 4.3rem;">
+                        </a>
+                    </span>
+                    <span class="navbar-caption-wrap">
+                        <a class="navbar-caption text-black display-4" href="https://jufu520.com.tw/">住福團隊-吳頌揚</a>
+                    </span>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+                    data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">關於頌揚</a>
+                            <a class="nav-link link text-black display-4" href="#about-us-1-u6Mcis6gLv">關於頌揚</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#buyHouse">雲林買房</a>
+                            <a class="nav-link link text-black display-4" href="#buyHouse"
+                                aria-expanded="false">雲林買房</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#sellHouse">雲林賣房</a>
+                            <a class="nav-link link text-black display-4" href="#sellHouse"
+                                aria-expanded="false">雲林賣房</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#testimonials">客戶好評</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">立即聯繫</a>
+                            <a class="nav-link link text-black display-4" href="#testimonials-1-u6Mcis7h9p"
+                                aria-expanded="false">客戶好評</a>
                         </li>
                     </ul>
+                    <div class="navbar-buttons mbr-section-btn">
+                        <a class="btn btn-primary display-4" href="#contacts-1-u6Mcis8Giv">立即聯繫</a>
+                    </div>
                 </div>
             </div>
         </nav>
-    </header>
+    </section>
 
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="container">
-                <h1>選擇頌揚<br>幸福不打揚</h1>
-                <p>與您攜手 打造理想的家<br>注意每項細節 給客戶安心的服務</p>
-                <a href="#about" class="btn btn-primary">立即了解</a>
-            </div>
-        </section>
 
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2>關於頌揚</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="assets/images/IMG.JPG" alt="吳頌揚照片" class="img-fluid">
-                    </div>
-                    <div class="col-md-6">
-                        <ul>
-                            <li>雲林斗六人</li>
-                            <li>年輕 積極 有衝勁</li>
-                            <li>善用社群網路</li>
-                            <li>設計精美宣傳單</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <style>
+        .cid-u6Mcis5FWr {
+            display: flex;
+            background-image: url("assets/images/bg-2.jpg");
+        }
 
-        <section id="buyHouse" class="service-section">
-            <div class="container">
-                <h2>雲林買房</h2>
-                <p>找尋合適您的房子</p>
-                <p>透天 ‧ 店面 ‧ 土地</p>
-                <a href="https://www.rakuya.com.tw/store/my/659531" target="_blank" class="btn btn-secondary">馬上看物件</a>
-            </div>
-        </section>
+        .cid-u6Mcis5FWr .mbr-overlay {
+            background-color: #000000;
+            opacity: 0.5;
+        }
 
-        <section id="sellHouse" class="service-section">
-            <div class="container">
-                <h2>雲林賣房</h2>
-                <p>不動產估價 — 專業市場分析</p>
-                <p>專任委託 快速配對<br>大量廣告曝光</p>
-                <a href="https://line.me/ti/p/_ix1jviwYx" target="_blank" class="btn btn-secondary">專家估價諮詢</a>
-            </div>
-        </section>
+        @media (min-width: 768px) {
+            .cid-u6Mcis5FWr {
+                align-items: flex-end;
+            }
 
-        <section id="testimonials" class="testimonial-section">
-            <div class="container">
-                <h2>客戶好評</h2>
-                <div class="testimonial-carousel">
-                    <!-- 這裡可以使用Bootstrap的輪播組件 -->
-                    <div class="testimonial-item">
-                        <p>"專業、快速、值得信賴！"</p>
-                        - 吳頌揚, 銷售顧問
-                    </div>
-                    <!-- 可以添加更多評價項目 -->
-                </div>
-                <a href="https://www.google.com/search?hl=zh-TW&gl=tw&q=住商-住福團隊吳頌揚#lrd=0x346eb9553b8168e5:0xe1b7b5714d9ff1a4,1" target="_blank" class="btn btn-link">看更多客戶好評 >>></a>
-            </div>
-        </section>
+            .cid-u6Mcis5FWr .row {
+                justify-content: center;
+            }
 
-        <section id="news" class="news-section">
-            <div class="container">
-                <h2>最新消息</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="news-item">
-                            <a href="https://tw.news.yahoo.com/%E8%80%B3%E6%BF%A1%E7%9B%AE%E6%9F%93%E6%88%90%E5%BF%97%E6%A5%AD-%E5%90%B3%E9%A0%8C%E6%8F%9A%E4%BA%8C%E4%BB%A3%E6%8E%A5%E7%8F%AD%E6%8B%9A%E5%87%BA%E9%AB%98%E7%B8%BE%E6%95%88%E6%89%93%E9%80%A0%E4%BA%92%E5%8A%A9%E5%85%B1%E5%A5%BD%E5%9C%98%E9%9A%8A-053410580.html" target="_blank">
-                                <img src="https://s.yimg.com/ny/api/res/1.2/oiV_99h2PnvGF0KfWva.rg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTcyMTtjZj13ZWJw/https://media.zenfs.com/zh-tw/innews_com_tw_7/b3c9532d36478fedba9035c6bd045c7a" alt="吳頌揚二代接班新聞" class="img-fluid">
-                                <h3>耳濡目染成志業！吳頌揚二代接班拚出高績效打造互助共好團隊</h3>
-                            </a>
-                            <p>點擊看新聞</p>
-                        </div>
-                    </div>
-                    <!-- 可以添加更多新聞項目 -->
-                </div>
-            </div>
-        </section>
+            .cid-u6Mcis5FWr .content-wrap {
+                padding: 1rem 3rem;
+            }
+        }
 
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2>聯絡頌揚</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3>服務專線</h3>
-                        <p><a href="tel:0978-953977">0978-953977</a></p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>信箱</h3>
-                        <p><a href="mailto:imrichart0111@gmail.com">imrichart0111@gmail.com</a></p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>服務據點</h3>
-                        <p><a href="https://goo.gl/maps/Ah8sEPREaZfSXZa1A">雲林斗南店：雲林縣斗南鎮中山路107號</a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        @media (max-width: 991px) and (min-width: 768px) {
+            .cid-u6Mcis5FWr .content-wrap {
+                min-width: 50%;
+            }
+        }
 
-    <footer class="site-footer">
-        <div class="container">
+        @media (max-width: 767px) {
+            .cid-u6Mcis5FWr {
+                -webkit-align-items: center;
+                align-items: flex-end;
+            }
+
+            .cid-u6Mcis5FWr .mbr-row {
+                -webkit-justify-content: center;
+                justify-content: center;
+            }
+
+            .cid-u6Mcis5FWr .content-wrap {
+                width: 100%;
+            }
+        }
+
+        .cid-u6Mcis5FWr .mbr-section-title,
+        .cid-u6Mcis5FWr .mbr-section-subtitle {
+            text-align: center;
+        }
+
+        .cid-u6Mcis5FWr .mbr-text,
+        .cid-u6Mcis5FWr .mbr-section-btn {
+            text-align: center;
+        }
+    </style>
+
+    <section class="header16 cid-u6Mcis5FWr mbr-fullscreen mbr-parallax-background" id="hero-17-u6Mcis5FWr">
+        <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
-                    <h3>快速連結</h3>
-                    <ul class="footer-links">
-                        <li><a href="#hero">首頁</a></li>
-                        <li><a href="#about">關於</a></li>
-                        <li><a href="#testimonials">好評</a></li>
-                        <li><a href="#contact">聯絡</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <h3>聯絡我們</h3>
-                    <ul class="social-icons">
-                        <li><a href="https://www.facebook.com/profile.php?id=100064031046011&mibextid=opq0tG" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.youtube.com/channel/UC7UeefqFmLzQ9HD6_R81G4w/videos" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a></li>
-                        <li><a href="https://line.me/ti/p/_ix1jviwYx" target="_blank" class="line"><i class="fab fa-line"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="copyright-text">版權所有 © 2024 Danny</p>
+                <div class="content-wrap col-12 col-md-10">
+                    <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1">
+                        <strong>選擇頌揚</br>幸福不打揚</strong>
+                    </h1>
+                    <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">與您攜手 打造理想的家</br>注意每項細節 給客戶安心的服務</p>
+                    <div class="mbr-section-btn"><a class="btn btn-white-outline display-7" href="#about-us-1-u6Mcis6gLv">立即了解</a></div>
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
+<style>
+    .cid-u6Mcis6gLv {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        background-color: transparent;
+    }
 
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    .cid-u6Mcis6gLv .mbr-fallback-image.disabled {
+        display: none;
+    }
+
+    .cid-u6Mcis6gLv .mbr-fallback-image {
+        display: block;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    /* 手機裝置 */
+    @media (max-width: 767px) {
+        .cid-u6Mcis6gLv .image-wrapper {
+            flex-direction: column;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            position: relative;
+        }
+
+        .cid-u6Mcis6gLv .image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* 確保圖片等比例縮放且不裁切 */
+        }
+    }
+
+    /* 中等裝置 */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .cid-u6Mcis6gLv .image-wrapper {
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            position: relative;
+        }
+
+        .cid-u6Mcis6gLv .image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* 確保圖片等比例縮放且不裁切 */
+        }
+    }
+
+    /* 大裝置 */
+    @media (min-width: 992px) {
+        .cid-u6Mcis6gLv .image-wrapper {
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            position: relative;
+        }
+
+        .cid-u6Mcis6gLv .image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* 確保圖片等比例縮放且不裁切 */
+        }
+    }
+
+    .cid-u6Mcis6gLv .card-box {
+        max-width: 750px;
+        padding-top: 2rem;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .cid-u6Mcis6gLv img,
+    .cid-u6Mcis6gLv .item-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* 確保圖片等比例縮放且不裁切 */
+    }
+
+    .cid-u6Mcis6gLv .card-wrapper {
+        background: #ffffff;
+    }
+
+    .cid-u6Mcis6gLv .mbr-text,
+    .cid-u6Mcis6gLv .mbr-section-btn {
+        color: #000000;
+    }
+
+    .cid-u6Mcis6gLv .card-title,
+    .cid-u6Mcis6gLv .card-box {
+        color: #232323;
+    }
+
+    /* 卡片內容文字的內距 */
+    @media (max-width: 767px) {
+        .cid-u6Mcis6gLv .card-content-text {
+            padding: 2rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .cid-u6Mcis6gLv .card-content-text {
+            padding: 2.25rem;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .cid-u6Mcis6gLv .card-content-text {
+            padding: 4rem;
+        }
+    }
+</style>
+
+
+
+
+    <section class="article01 cid-u6Mcis6gLv" id="about-us-1-u6Mcis6gLv">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="card col-md-12 col-lg-12">
+                    <div class="card-wrapper">
+                        <div class="row">
+                            <div class="image-wrapper col-12 col-sm-12 justify-content-center">
+                                <img src="assets/images/IMG.JPG">
+                            </div>
+
+                        </div>
+
+                        <div class="card-box align-left mb-3 card-content-text">
+                            <h4 class="card-title mbr-fonts-style mbr-white mb-0 display-5">
+                                <strong>關於頌揚</strong>
+                            </h4>
+                            <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-7">
+                                雲林斗六人 </p>
+                            <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-7">
+                                年輕 積極 有衝勁 </p>
+                            </p>
+                            <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-7">
+                                善用社群網路 </p>
+                            </p>
+                            <p class="mbr-text mbr-fonts-style mt-3 mb-0 display-7">
+                                設計精美宣傳單 </p>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="py-16 xs:pt-7 xs:pb-5">
+    <div id="buyHouse" class="flex items-stretch xs:flex-col xs:items-center mb-24 xs:mb-7">
+        <div class="mr-14 md:mr-8 left-side xs:order-1 xs:mr-0 xs:w-full aos-init aos-animate" data-aos="fade-right"
+            data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true"
+            data-aos-once="false">
+            <div class="max-w-xs ml-auto mb-10 xs:mx-auto xs:max-w-full xs:w-9/12">
+                <h2 class="title font-medium text-gn-200 mb-8 xs:mb-2">雲林買房</h2>
+                <p class="subtitle text-left">找尋合適您的房子</p>
+                <p class="subtitle text-right mr-4 mb-14 md:mr-20 xs:mb-5"></p>
+                <h3 class="text-right mr-4 md:mr-0">透天 ‧ 店面 ‧ 土地</h3>
+            </div>
+            <a href="https://www.rakuya.com.tw/store/my/659531" target="_blank"
+                class="flex justify-end items-center bg-gn-200 text-white py-3" id="seemore">
+                <span class="text-3xl font-serif pointer-events-none">馬上看物件&rarr;</span>
+            </a>
+        </div>
+        <div class="right-side xs:mb-5 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100"
+            data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
+            <a href="https://www.rakuya.com.tw/store/my/659531" target="_blank">
+                <img src="assets/images/photo-1600585154340-be6161a56a0c.jpeg"
+                    class="max-h-96 md:h-full w-full object-cover" alt="雲林買房-房屋農地物件搜尋">
+            </a>
+        </div>
+    </div>
+    <div id="sellHouse" class="flex items-stretch xs:flex-col xs:items-center">
+        <div class="mr-14 md:mr-8 left-side xs:order-1 xs:mr-0 xs:w-full aos-init aos-animate" data-aos="fade-right"
+            data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true"
+            data-aos-once="false">
+            <div class="max-w-xs ml-auto mb-10 xs:mx-auto xs:max-w-full xs:w-9/12">
+                <h2 class="title font-medium text-gn-200 mb-8 xs:mb-2">雲林賣房</h2>
+                <p class="subtitle" style="text-align: left;">不動產估價</p>
+                <p class="subtitle text-right mr-4 mb-14 md:mr-10">—專業市場分析</p>
+                <h3 class="text-left md:text-left md:mr-0">專任委託 快速配對<br>大量廣告曝光</h3>
+            </div>
+            <a href="https://line.me/ti/p/_ix1jviwYx" target="_blank"
+                class="flex justify-end items-center bg-gn-200 text-white py-3" id="contact-propertyvaluer">
+                <span class="text-3xl font-serif pointer-events-none">專家估價諮詢&rarr;</span>
+            </a>
+        </div>
+        <div class="right-side xs:mb-5 aos-init aos-animate" data-aos="fade-left" data-aos-offset="100"
+            data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
+            <a href="https://line.me/ti/p/_ix1jviwYx" target="_blank">
+                <img src="assets/images/photo-1493809842364-78817add7ffb.jpeg"
+                    class="max-h-96 md:h-full w-full object-cover object-bottom" alt="雲林賣房-房屋農地不動產實價登錄-雲林房價諮詢">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .cid-u6Mcis5bXN {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        background-color: #ffffff;
+    }
+
+    .cid-u6Mcis5bXN .item:focus,
+    .cid-u6Mcis5bXN span:focus {
+        outline: none;
+    }
+
+    .cid-u6Mcis5bXN .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+        overflow: hidden;
+    }
+
+    .cid-u6Mcis5bXN .content-head {
+        max-width: 800px;
+    }
+
+    .cid-u6Mcis5bXN .item {
+        color: #232323;
+        min-height: 90px;
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+        .cid-u6Mcis5bXN .item {
+            min-height: 45px;
+        }
+    }
+</style>
+<section class="gallery10 cid-u6Mcis5bXN" id="features-69-u6Mcis5bXN">
+    <div class="container-fluid">
+        <div class="loop-container">
+            <div class="item display-1" data-linewords="
+          專任委託。專業行銷。稅務試算。優質物件。
+          透天。大樓。別墅。農地。建地。" data-direction="-1" data-speed="0.06">
+            </div>
+            <div class="item display-1" data-linewords="
+          專任委託。專業行銷。稅務試算。優質物件。
+          透天。大樓。別墅。農地。建地。" data-direction="-1" data-speed="0.06">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .cid-u6Mcis7h9p {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        background-color: #ffffff;
+    }
+
+    .cid-u6Mcis7h9p .mbr-fallback-image.disabled {
+        display: none;
+    }
+
+    .cid-u6Mcis7h9p .mbr-fallback-image {
+        display: block;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .cid-u6Mcis7h9p p {
+        line-height: 1.2;
+    }
+
+    .cid-u6Mcis7h9p .embla__slide {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        min-width: 770px;
+        max-width: 570px;
+    }
+
+    @media (max-width: 768px) {
+        .cid-u6Mcis7h9p .embla__slide {
+            min-width: 70%;
+            max-width: initial;
+            margin-left: 1rem !important;
+            margin-right: 1rem !important;
+        }
+    }
+
+    .cid-u6Mcis7h9p .embla__button--next,
+    .cid-u6Mcis7h9p .embla__button--prev {
+        display: flex;
+    }
+
+    .cid-u6Mcis7h9p .embla__button {
+        top: 50%;
+        width: 60px;
+        height: 60px;
+        margin-top: -1.5rem;
+        font-size: 22px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        transition: all 0.3s;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cid-u6Mcis7h9p .embla__button:disabled {
+        cursor: default;
+        display: none;
+    }
+
+    .cid-u6Mcis7h9p .embla__button:hover {
+        background: #000;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .cid-u6Mcis7h9p .embla__button.embla__button--prev {
+        left: 0;
+        margin-left: 2.5rem;
+    }
+
+    .cid-u6Mcis7h9p .embla__button.embla__button--next {
+        right: 0;
+        margin-right: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .cid-u6Mcis7h9p .embla__button {
+            top: auto;
+        }
+    }
+
+    .cid-u6Mcis7h9p .item-wrapper {
+        height: 100%;
+    }
+
+    .cid-u6Mcis7h9p .item-menu-overlay {
+        border-radius: 2rem;
+    }
+
+    .cid-u6Mcis7h9p .user_image {
+        max-width: 600px;
+        max-height: 400px;
+        margin-bottom: 1.6rem;
+        overflow: hidden;
+        margin: 0 auto auto auto;
+    }
+
+    .cid-u6Mcis7h9p .user_image img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    @media (max-width: 230px) {
+        .cid-u6Mcis7h9p .user_image {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .cid-u6Mcis7h9p .embla {
+        position: relative;
+        width: 100%;
+    }
+
+    .cid-u6Mcis7h9p .embla__viewport {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .cid-u6Mcis7h9p .embla__viewport.is-draggable {
+        cursor: grab;
+    }
+
+    .cid-u6Mcis7h9p .embla__viewport.is-dragging {
+        cursor: grabbing;
+    }
+
+    .cid-u6Mcis7h9p .embla__container {
+        display: flex;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .cid-u6Mcis7h9p .user_desk {
+        color: #000000;
+    }
+
+    .cid-u6Mcis7h9p .user_name {
+        color: #000000;
+    }
+</style>
+<section class="slider2 mbr-embla cid-u6Mcis7h9p" id="testimonials-1-u6Mcis7h9p">
+    <div class="position-relative text-center">
+        <div class="embla" data-skip-snaps="true" data-align="center" data-auto-play="true" data-auto-play-interval="5"
+            data-draggable="true">
+            <div class="embla__viewport container-fluid">
+                <div class="embla__container">
+                    <div class="embla__slide slider-image item" style="margin: auto;">
+                        <div class="user">
+                            <div class="user_image">
+                                <div class="item-wrapper position-relative">
+                                    <img src="assets/images/IMG_7207.JPG" alt="吳頌揚">
+                                </div>
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-5">
+                                    <strong>專業、快速、值得信賴！</strong>
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style display-7">
+                                吳頌揚
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                銷售顧問
+                            </div>
+                        </div>
+                    </div>
+                    <div class="embla__slide slider-image item" style="margin-left: 10rem; margin-right: 10rem;">
+                        <div class="user">
+                            <div class="user_image">
+                                <div class="item-wrapper position-relative">
+                                     <img src="assets/images/IMG_7207.JPG" alt="吳頌揚">
+                                </div>
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-5">
+                                    <strong>找房子從未如此輕鬆愉快！</strong>
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style display-7">
+                                蔡承恩
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                客戶
+                            </div>
+                        </div>
+                    </div>
+                    <div class="embla__slide slider-image item" style="margin-left: 10rem; margin-right: 10rem;">
+                        <div class="user">
+                            <div class="user_image">
+                                <div class="item-wrapper position-relative">
+                                     <img src="assets/images/IMG_7207.JPG" alt="吳頌揚">
+                                </div>
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-5">
+                                    <strong>感謝您們幫我找到夢想中的家！</strong>
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style display-7">
+                                王大力
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                買家
+                            </div>
+                        </div>
+                    </div>
+                    <div class="embla__slide slider-image item" style="margin-left: 10rem; margin-right: 10rem;">
+                        <div class="user">
+                            <div class="user_image">
+                                <div class="item-wrapper position-relative">
+                                     <img src="assets/images/IMG_7207.JPG" alt="吳頌揚">
+                                </div>
+                            </div>
+                            <div class="user_text mb-4">
+                                <p class="mbr-fonts-style display-5">
+                                    <strong>買房最佳的選擇！</strong>
+                                </p>
+                            </div>
+                            <div class="user_name mbr-fonts-style display-7">
+                                Dan
+                            </div>
+                            <div class="user_desk mbr-fonts-style display-7">
+                                半導體工程師
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="https://www.google.com/search?hl=zh-TW&gl=tw&q=住商-住福團隊吳頌揚#lrd=0x346eb9553b8168e5:0xe1b7b5714d9ff1a4,1"
+                target="_blank" class="block text-center text-readMore text-gn-100 mb-16">看更多客戶好評 >>>
+            </a>
+            <button class="embla__button embla__button--prev">
+                <span class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont" aria-hidden="true"></span>
+                <span class="sr-only visually-hidden">Previous</span>
+            </button>
+            <button class="embla__button embla__button--next">
+                <span class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont" aria-hidden="true"></span>
+                <span class="sr-only visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .cid-u6Mcis815S .iconfont-wrapper {
+        display: block;
+        font-size: 24px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+
+        line-height: 50px;
+
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        position: fixed;
+
+        z-index: 1000;
+
+    }
+
+    .cid-u6Mcis815S .bg-facebook {
+        background: #1778f2;
+        color: #ffffff;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .cid-u6Mcis815S .bg-youtube {
+        background: #ff0000;
+        color: #ffffff;
+        bottom: 80px;
+        right: 20px;
+    }
+
+    .cid-u6Mcis815S .bg-line {
+        background: #00c300;
+        color: #ffffff;
+        bottom: 140px;
+        right: 20px;
+    }
+
+    .cid-u6Mcis815S .bg-phone {
+        background: #ffffff;
+        color: #ffffff;
+        bottom: 200px;
+        right: 20px;
+    }
+
+    #hero-17-u6Mcis5FWr .iconfont-wrapper {
+        display: none !important;
+    }
+
+    /* 手機版樣式 */
+    @media (max-width: 768px) {
+        .cid-u6Mcis815S .social-list {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 60px;
+        }
+
+        .cid-u6Mcis815S .iconfont-wrapper {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+        }
+
+        .cid-u6Mcis815S .iconfont-wrapper .socicon {
+            font-size: 30px;
+        }
+
+        .cid-u6Mcis815S .bg-facebook {
+            background-color: #1778f2;
+            color: white;
+        }
+
+        .cid-u6Mcis815S .bg-youtube {
+            background-color: #ff0000;
+            color: white;
+        }
+
+        .cid-u6Mcis815S .bg-line {
+            background-color: #00c300;
+            color: white;
+        }
+
+        .cid-u6Mcis815S .bg-phone {
+            background-color: #ffffff;
+            color: white;
+        }
+    }
+</style>
+
+<section class="social4 cid-u6Mcis815S" id="follow-us-1-u6Mcis815S">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-12">
+                <h3 class="mbr-section-title align-center mb-5 mbr-fonts-style display-2"></h3>
+                <div class="social-list align-center">
+                    <a class="iconfont-wrapper bg-facebook m-2" target="_blank"
+                        href="https://www.facebook.com/profile.php?id=100064031046011&mibextid=opq0tG">
+                        <span class="socicon-facebook socicon"></span>
+                    </a>
+                    <a class="iconfont-wrapper bg-youtube m-2" target="_blank"
+                        href="https://www.youtube.com/channel/UC7UeefqFmLzQ9HD6_R81G4w/videos">
+                        <span class="socicon-youtube socicon"></span>
+                    </a>
+                    <a class="iconfont-wrapper bg-line m-2" target="_blank" href="https://line.me/ti/p/_ix1jviwYx">
+                        <span class="socicon-line socicon"></span>
+                    </a>
+                    <a class="iconfont-wrapper bg-phone m-2" target="_blank" href="tel:0978-953977">
+                        <span class="socicon-phone socicon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.news-section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.news-item {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.news-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.news-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.news-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.news-description {
+    color: #6c757d;
+}
+</style>
+<section class="news-section" id="news">
+    <div class="container">
+        <h2 class="section-title">最新消息</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="news-item">
+                                <a href="https://tw.news.yahoo.com/%E8%80%B3%E6%BF%A1%E7%9B%AE%E6%9F%93%E6%88%90%E5%BF%97%E6%A5%AD-%E5%90%B3%E9%A0%8C%E6%8F%9A%E4%BA%8C%E4%BB%A3%E6%8E%A5%E7%8F%AD%E6%8B%9A%E5%87%BA%E9%AB%98%E7%B8%BE%E6%95%88%E6%89%93%E9%80%A0%E4%BA%92%E5%8A%A9%E5%85%B1%E5%A5%BD%E5%9C%98%E9%9A%8A-053410580.html" target="_blank">
+                                    <img src="https://s.yimg.com/ny/api/res/1.2/oiV_99h2PnvGF0KfWva.rg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTcyMTtjZj13ZWJw/https://media.zenfs.com/zh-tw/innews_com_tw_7/b3c9532d36478fedba9035c6bd045c7a" alt="News 1" class="news-image">
+                                    <h3 class="news-title">耳濡目染成志業！吳頌揚二代接班拚出高績效打造互助共好團隊</h3>
+                                </a>
+                                <p class="news-description">點擊看新聞</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="news-item">
+                    <a href="https://n.yam.com/Article/20240529479589#google_vignette" target="_blank">
+                            <img src="https://innews.com.tw/wp-content/uploads/2024/05/S__49127469_0.jpg" alt="News 2" class="news-image">
+                        <h3 class="news-title">住商不動產二代吳頌揚接班　拚出高績效打造互助共好團隊</h3>
+                    </a>
+                    <p class="news-description">點擊看新聞</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+    
+<style>
+    .cid-u6Mcis8Giv {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        background-color: transparent;
+    }
+
+    .cid-u6Mcis8Giv .mbr-fallback-image.disabled {
+        display: none;
+    }
+
+    .cid-u6Mcis8Giv .mbr-fallback-image {
+        display: block;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .cid-u6Mcis8Giv .row {
+        justify-content: center;
+    }
+
+    .cid-u6Mcis8Giv .item {
+        margin-bottom: 2rem;
+    }
+
+    @media (max-width: 767px) {
+        .cid-u6Mcis8Giv .item {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .cid-u6Mcis8Giv .item .item-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background: #ffffff;
+        padding: 2.25rem;
+    }
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+        .cid-u6Mcis8Giv .item .item-wrapper {
+            padding: 2rem 1.5rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .cid-u6Mcis8Giv .item .item-wrapper {
+            padding: 2rem 1.5rem;
+        }
+    }
+
+    .cid-u6Mcis8Giv .content-head {
+        max-width: 800px;
+    }
+</style>
+<section class="contacts01 cid-u6Mcis8Giv" id="contacts-1-u6Mcis8Giv">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 content-head">
+                <div class="mbr-section-head mb-5">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                        <strong>聯絡頌揚</strong>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item features-without-image col-12 col-md-6 active">
+                <div class="item-wrapper">
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-3 display-5">
+                            <strong>服務專線</strong>
+                        </h6>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <a href="tel:0978-953977" class="text-black">0978-953977</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item features-without-image col-12 col-md-6">
+                <div class="item-wrapper">
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-3 display-5">
+                            <strong>信箱</strong>
+                        </h6>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <a href="mailto:imrichart0111@gmail.com" class="text-black">imrichart0111@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item features-without-image col-12 col-md-12">
+                <div class="item-wrapper">
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-3 display-5">
+                            <strong>服務據點</strong>
+                        </h6>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <span><a href="https://goo.gl/maps/Ah8sEPREaZfSXZa1A">雲林斗南店：雲林縣斗南鎮中山路107號</a><br /></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .cid-u6Mcis8i0i {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        background-color: #000000;
+    }
+
+    .cid-u6Mcis8i0i .social-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .cid-u6Mcis8i0i .social-row .soc-item {
+        margin: 8px;
+    }
+
+    .cid-u6Mcis8i0i .social-row .soc-item a:hover .mbr-iconfont,
+    .cid-u6Mcis8i0i .social-row .soc-item a:focus .mbr-iconfont {
+        background-color: #ffffff;
+    }
+
+    .cid-u6Mcis8i0i .social-row .soc-item a .mbr-iconfont {
+        width: 72px;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        font-size: 32px;
+        background-color: #edefeb;
+        color: #000000;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .cid-u6Mcis8i0i .row-links {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cid-u6Mcis8i0i .header-menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .cid-u6Mcis8i0i .header-menu li {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .cid-u6Mcis8i0i .header-menu li p {
+        margin: 0;
+    }
+
+    .cid-u6Mcis8i0i .copyright {
+        margin-bottom: 0;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .cid-u6Mcis8i0i .mbr-section-title {
+        color: #ffffff;
+    }
+</style>
+<section class="footer3 cid-u6Mcis8i0i" once="footers" id="footer-6-u6Mcis8i0i">
+    <div class="container">
+        <div class="row">
+            <div class="row-links">
+                <ul class="header-menu">
+                    <li class="header-menu-item mbr-fonts-style display-5">
+                        <a href="#" class="text-white">首頁</a>
+                    </li>
+                    <li class="header-menu-item mbr-fonts-style display-5">
+                        <a href="#about-us-1-u6Mcis6gLv" class="text-white">關於</a>
+                    </li>
+                    <li class="header-menu-item mbr-fonts-style display-5">
+                        <a href="#testimonials-1-u6Mcis7h9p" class="text-white">好評</a>
+                    </li>
+                    <li class="header-menu-item mbr-fonts-style display-5">
+                        <a href="#contacts-1-u6Mcis8Giv" class="text-white">聯絡</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 mt-4">
+                <p class="mbr-fonts-style copyright display-7">
+                    版權所有 © 2024 Danny
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="assets/parallax/jarallax.js"></script>
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/dropdown/js/navbar-dropdown.js"></script>
+<script src="assets/embla/embla.min.js"></script>
+<script src="assets/embla/script.js"></script>
+<script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>
+<script src="assets/scrollgallery/scroll-gallery.js"></script>
+<script src="assets/smoothscroll/smooth-scroll.js"></script>
+<script src="assets/theme/js/script.js"></script>
+<script src="assets/formoid/formoid.min.js"></script>
+
+<script>
+    (function () {
+        var animationInput = document.createElement('input');
+        animationInput.setAttribute('name', 'animation');
+        animationInput.setAttribute('type', 'hidden');
+        document.body.append(animationInput);
+    })();
+
+</script>
+<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool' md5='xxx' url='xxx' tk-name='xxx'
+    interval='xxx' disable-menu='xxx' detectors='xxx' clear-log='true' disable-select='true' disable-copy='true'
+    disable-cut='true' disable-paste='true'></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="assets/theme/js/index.js"></script>
+
 </body>
+
 </html>
